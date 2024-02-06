@@ -1,0 +1,31 @@
+function calcularRAnk(vitoria, derrota) {
+    let saldoVitoria = vitoria - derrota;
+    let nivel;
+
+    if( vitoria < 10 ){
+        nivel = "Ferro";
+    } else if (vitoria >= 10 && vitoria <= 20){
+        nivel = "Bronze"
+    } else if (vitoria > 20 && vitoria <= 50){
+        nivel = "Prata"
+    } else if (vitoria > 50 && vitoria <= 80){
+        nivel = "Ouro"
+    } else if (vitoria > 80 && vitoria <= 90){
+        nivel = "Diamante"
+    } else if (vitoria > 90 && vitoria <= 100){
+        nivel = "Lendário"
+    } else if (vitoria > 100){
+        nivel = "Imortal"
+    }
+    
+    return {
+        saldoVitoria,
+        nivel
+    };
+}
+
+const vitoria = 85;
+const derrota = 20;
+const resultado = calcularRAnk(vitoria, derrota);
+
+console.log("o Herói tem de ${resultado.saldoVitoria} e está no nivel de ${resultado;nivel");
